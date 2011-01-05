@@ -4,7 +4,7 @@
 # author:: Benjamin Perrard
 # date:: 18 Décembre 2010
 
-require 'lib/primes'
+require 'lib/my_primes'
 
 def main(max)
 	matrix = Array.new
@@ -24,7 +24,6 @@ def main(max)
       end
       return i if matrix[i][j] >= max
     end
-    p matrix
   end
 end
 

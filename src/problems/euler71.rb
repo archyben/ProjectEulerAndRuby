@@ -1,9 +1,9 @@
 #!/usr/local/bin/ruby
 # coding: utf-8
 
-require "euler/lib/phi"
-require "euler/lib/primes"
-require "euler/lib/frac"
+require "lib/my_phi"
+require "lib/my_primes"
+require "lib/my_frac"
 
 def main(max)
 	puts "Début initialisation..."

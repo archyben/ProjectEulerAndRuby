@@ -3,7 +3,7 @@
 
 # author:: Benjamin Perrard
 
-require "euler/lib/integer_add"
+require "lib/my_integer"
 
 def sum_factorial(value)
 	tmp = 0
@@ -21,7 +21,6 @@ def main(max)
 		all_values = Array.new
 		loop do
 			if all_values.include?(tmp_value)
-				puts "#{value} - #{all_values.size}"
 				if all_values.size == 60
 					res+=1
 				end
@@ -32,9 +31,6 @@ def main(max)
 			tmp_value = sum_factorial(tmp_value) 
 		end
 	end
-	puts dictionnary[1454]
-	puts dictionnary[69]
-	puts dictionnary[78]
 	return res
 end
 

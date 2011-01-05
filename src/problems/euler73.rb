@@ -1,8 +1,8 @@
 #!/usr/local/bin/ruby
 # coding: utf-8
 
-require "euler/lib/phi"
-require "euler/lib/primes"
+require "lib/my_phi"
+require "lib/my_primes"
 require "rational"
 
 def main(max)

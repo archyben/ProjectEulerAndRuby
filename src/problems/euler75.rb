@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # coding: utf-8
 
-require "lib/phi"
-require "lib/primes"
+require "lib/my_phi"
+require "lib/my_primes"
 
 def main(max)
 	prime_wire = Array.new

@@ -4,9 +4,9 @@
 # author:: Benjamin Perrard
 
 require 'thread'
-require "euler/lib/combinatories"
-require "euler/lib/phi"
-require "euler/lib/primes"
+require "lib/my_combinatories"
+require "lib/my_phi"
+require "lib/my_primes"
 
 
 ############################################

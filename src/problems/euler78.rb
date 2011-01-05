@@ -4,9 +4,7 @@
 # author:: Benjamin Perrard
 # date:: 27 Décembre 2010
 
-def pent(value)
-	(value * (3*value-1)) / 2
-end
+require "lib/my_integer"
 
 def main(max)
 	matrix = Array.new
@@ -18,7 +16,7 @@ def main(max)
     sens = 1
     value = 1
     while true
-    	tmp = i-(pent(value * sens))
+    	tmp = i-((value * sens).pent)
     	#puts "#{i} #{tmp} #{sens} #{value}"
     	break if tmp < 0
     	matrix[i] += ( value % 2 == 0 ? -1 : 1) * matrix[tmp]

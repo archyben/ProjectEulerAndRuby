@@ -5,7 +5,7 @@ def main(max)
 	analyse_list = Hash.new
 	numbers_list = Array.new
 	all_digits = Array.new
-	File.open("keylog.txt","r") do |file|
+	File.open("flat_files/euler79_keylog.txt","r") do |file|
 		file.each_line do |line|
 			numbers_list << line.strip.split(//).collect { |i| i.to_i }
 		end
@@ -20,11 +20,18 @@ def main(max)
 			analyse_list[tmp] = (analyse_list[tmp] + number[i+1, max - i -1]).uniq
 		end
 	end
-	p analyse_list
-	return
+	res = Array.new
+	size = analyse_list.size
+	analyse_list.each_key do |key|
+		res[size - analyse_list[key].size] = key
+	end
+	return res.join
 end
 
 if __FILE__==$0
+time_before = Time.now
 	max = 3
-	puts main(max)
+	res = main(max)
+	puts "Le résultat du problème 79 est #{res}\n"+ \
+  	"Réalisé en #{Time.now - time_before} secondes"
 end
